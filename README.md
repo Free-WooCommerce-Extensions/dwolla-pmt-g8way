@@ -8,6 +8,26 @@ A [WordPress](http://wordpress.org/) plugin built using WordPress best-practices
 * **Author:** [Pablo Carranza](https://github.com/vDevices/)
 * **License:** [GPLv3](/LICENSE)
 
+This Payment Gateway for WooCommerce extends the functionality of WooCommerce to accept payments via Dwolla.
+
+### Features
+1. No SSL required
+2. No PCI compliance required
+3. Easy to install and configure
+4. Option to configure success & failure message
+5. Safe way to process credit cards and debit cards on WooCommerce using an established, reliable network
+6. This plugin uses hosted a solution provided by Dwolla and payment is processed on secure servers
+
+### Installation
+1. Upload the `woocommerce-dwolla` folder/directory to the `/wp-content/plugins/` directory of your WordPress installation.
+2. Activate the plugin through the Dashboard => 'Plugins' menu in WordPress.
+3. Go to WooCommerce => Settings
+4. On the "Settings" page, select the "Payment Gateways" tab.
+5. Under "Payment Gateways" you will find all the available gateways, select the "Dwolla" option.
+6. On this page, you will find an option to configure this plugin for use with WooCommerce.
+7. Enter the API details (Login ID, Transaction Key, etc.).
+8. Configurable elements:
+
 ### What is WooCommerce?
 [WooCommerce](http://www.woothemes.com/woocommerce/) is a powerful, extendable WordPress e-commerce plugin that helps you sell anything. Beautifully. 
 
