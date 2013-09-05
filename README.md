@@ -1,4 +1,4 @@
-# Dwolla Payment Gateway for WooCommerce
+## Dwolla Payment Gateway for WooCommerce
 
 A [WordPress](http://wordpress.org/) plugin built using WordPress best-practices &ndash; both on the front and the back end. The WooCommerce Dwolla Payment Gateway provides sellers with the option of saving A LOT of money on credit card merchant- and/or PayPal transaction-fees.
 
@@ -30,7 +30,7 @@ Contributions & bug reports are always welcome:
 * When committing, reference your issue (e.g. #1234) and include a note about the fix;
 * Push the changes to your fork and submit a [Pull Request](https://help.github.com/articles/using-pull-requests) on the master repository;
 
-## Resources
+## Additional Resources
 
 * [Writing a Plugin | WordPress Codex](http://codex.wordpress.org/Writing_a_Plugin)
 * [Creating a plugin for WooCommerce](http://docs.woothemes.com/document/create-a-plugin/)
