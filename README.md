@@ -1,8 +1,8 @@
 ## Dwolla Payment Gateway for WooCommerce
 
-A [WordPress](http://wordpress.org/) plugin built using WordPress best-practices &ndash; both on the front and the back end. The WooCommerce Dwolla Payment Gateway provides sellers with the option of saving A LOT of money on credit card merchant- and/or PayPal transaction-fees.
+A [WordPress](http://wordpress.org/) plugin built using WordPress best-practices &ndash; both on the front and the back end. The Dwolla Payment Gateway for WooCommerce provides sellers with the option of saving A LOT of money on credit card merchant- and/or PayPal transaction-fees.
 
-* **Plugin Name:** WooCommerce Dwolla Payment Gateway
+* **Plugin Name:** Dwolla Payment Gateway for WooCommerce
 * **Description:** A cheaper alternative to PayPal & credit card merchant fees
 * **Version:** 1.0
 * **Author:** [Pablo Carranza](https://github.com/vDevices/)
@@ -19,14 +19,14 @@ This Payment Gateway for WooCommerce extends the functionality of WooCommerce to
 6. This plugin uses hosted a solution provided by Dwolla and payment is processed on secure servers
 
 ### Installation
-1. Upload the `woocommerce-dwolla` folder/directory to the `/wp-content/plugins/` directory of your WordPress installation.
-2. Activate the plugin through the Dashboard => 'Plugins' menu in WordPress.
+1. Upload the `woocommerce-dwolla` folder to the `/wp-content/plugins/` directory of your WordPress installation
+2. Activate the plugin through the Dashboard => 'Plugins' menu in WordPress
 3. Go to WooCommerce => Settings
-4. On the "Settings" page, select the "Payment Gateways" tab.
+4. On the "Settings" page, select the "Payment Gateways" tab
 5. Under "Payment Gateways" you will find all the available gateways, select the "Dwolla" option.
-6. On this page, you will find an option to configure this plugin for use with WooCommerce.
-7. Enter the API details (Login ID, Transaction Key, etc.).
-8. Configurable elements:
+6. On this page, you will find an option to configure this plugin for use with WooCommerce
+7. Enter the API details (Your Dwolla Key & Secret, etc.)
+8. Configurable elements
 
 ### What is WooCommerce?
 [WooCommerce](http://www.woothemes.com/woocommerce/) is a powerful, extendable WordPress e-commerce plugin that helps you sell anything. Beautifully. 
@@ -54,5 +54,18 @@ Contributions & bug reports are always welcome:
 
 * [Writing a Plugin | WordPress Codex](http://codex.wordpress.org/Writing_a_Plugin)
 * [Creating a plugin for WooCommerce](http://docs.woothemes.com/document/create-a-plugin/)
+* [WooCommerce payment gateway plugin base](http://docs.woothemes.com/document/woocommerce-payment-gateway-plugin-base/)
+* [WooCommerce Payment Gateway API](http://docs.woothemes.com/document/payment-gateway-api/)
+* [Let’s create a payment gateway plugin ( PayU ) for WooCommerce](http://www.mrova.com/lets-create-a-payment-gateway-plugin-payu-for-woocommerce/)
 * [Creating a Custom Plugin for Your WooCommerce Shop | SkyVerge](http://www.skyverge.com/blog/creating-custom-plugin-for-your-woocommerce-shop/)
 * [Guide to Migrating Your Plugin to WooCommerce 2.0 | SkyVerge](http://www.skyverge.com/blog/migrating-your-plugin-woocommerce-2-0/)
+* [The Dwolla API](https://developers.dwolla.com/)
+
+## Changelog
+
+* 1.0 - 9/5/2013
+	* Initial release
+
+### Upgrade Notice
+
+ No upgrade required at this time.
