@@ -31,9 +31,9 @@ function woocommerce_vdevices_dwolla_init() {
    }
    
    /**
-   * Authorize.net Payment Gateway class
+   * Dwolla Payment Gateway class
    */
-   class WC_Tech_Autho extends WC_Payment_Gateway 
+   class WC_vDevices_Dwolla extends WC_Payment_Gateway 
    {
       protected $msg = array();
       
@@ -83,35 +83,30 @@ function woocommerce_vdevices_dwolla_init() {
                   'title'        => __('Title:', 'vdevices'),
                   'type'         => 'text',
                   'description'  => __('This controls the title which the user sees during checkout.', 'vdevices'),
-                  'default'      => __('Authorize.net', 'vdevices')),
+                  'default'      => __('Dwolla', 'vdevices')),
             'description'  => array(
                   'title'        => __('Description:', 'vdevices'),
                   'type'         => 'textarea',
                   'description'  => __('This controls the description which the user sees during checkout.', 'vdevices'),
-                  'default'      => __('Pay securely by Credit or Debit Card through Authorize.net Secure Servers.', 'vdevices')),
-            'login_id'     => array(
-                  'title'        => __('Login ID', 'vdevices'),
+                  'default'      => __('Pay securely by Credit or Debit Card through Dwolla Secure Servers.', 'vdevices')),
+            'key'     => array(
+                  'title'        => __('Key', 'vdevices'),
                   'type'         => 'text',
-                  'description'  => __('This is API Login ID')),
-            'transaction_key' => array(
-                  'title'        => __('Transaction Key', 'vdevices'),
+                  'description'  => __('Your consumer key from Dwolla, for this plugin')),
+            'secret' => array(
+                  'title'        => __('Secret', 'vdevices'),
                   'type'         => 'text',
-                  'description'  =>  __('API Transaction Key', 'vdevices')),
+                  'description'  =>  __('Your consumer secret from Dwolla', 'vdevices')),
             'success_message' => array(
                   'title'        => __('Transaction Success Message', 'vdevices'),
                   'type'         => 'textarea',
                   'description'=>  __('Message to be displayed on successful transaction.', 'vdevices'),
-                  'default'      => __('Your payment has been procssed successfully.', 'vdevices')),
+                  'default'      => __('Your payment has been processed successfully.', 'vdevices')),
             'failed_message'  => array(
                   'title'        => __('Transaction Failed Message', 'vdevices'),
                   'type'         => 'textarea',
                   'description'  =>  __('Message to be displayed on failed transaction.', 'vdevices'),
                   'default'      => __('Your transaction has been declined.', 'vdevices')),
-            'working_mode'    => array(
-                  'title'        => __('API Mode'),
-                  'type'         => 'select',
-                  'options'      => array('false'=>'Live Mode', 'true'=>'Test/Sandbox Mode'),
-                  'description'  => "Live/Test Mode" )
          );
       }
       
@@ -261,7 +256,7 @@ function woocommerce_vdevices_dwolla_init() {
          $redirect_url = (get_option('woocommerce_thanks_page_id') != '' ) ? get_permalink(get_option('woocommerce_thanks_page_id')): get_site_url().'/' ;
          $relay_url = add_query_arg( array('wc-api' => get_class( $this ) ,'order_id' => $order_id ), $redirect_url );
          
-         $authorize_args = array(
+         $dwolla_args = array(
             'x_login'                  => $this->login,
             'x_amount'                 => $order->order_total,
             'x_invoice_num'            => $order_id,
@@ -292,10 +287,10 @@ function woocommerce_vdevices_dwolla_init() {
             'x_ship_to_zip'            => $order->shipping_postcode,
             );
 
-         $authorize_args_array = array();
+         $dwolla_args_array = array();
          
-         foreach($authorize_args as $key => $value){
-           $authorize_args_array[] = "<input type='hidden' name='$key' value='$value'/>";
+         foreach($dwolla_args as $key => $value){
+           $dwolla_args_array[] = "<input type='hidden' name='$key' value='$value'/>";
          }
          
          if($this->mode == 'true'){
